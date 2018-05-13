@@ -17,3 +17,5 @@ export function tensor(obj) {
     'tensor() only supports number or array as the input parameter.'
   );
 }
+
+window.tensor = tensor

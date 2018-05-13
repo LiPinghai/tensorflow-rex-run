@@ -21,12 +21,13 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.jsx?$/,
-        exclude: /node_modules|screen-capture/,
-        loader: 'eslint-loader'
-      },
+      // {
+      //   enforce: 'pre',
+      //   test: /\.jsx?$/,
+      //   exclude: /node_modules|screen-capture/,
+      //   loader: 'eslint-loader',
+
+      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,

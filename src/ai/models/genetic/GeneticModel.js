@@ -21,7 +21,7 @@ export default class GeneticModel extends Model {
     const offspring1 = parents[0].slice();
     const offspring2 = parents[1].slice();
     // Select a random crossover point
-    const crossOverPoint = Math.floor(Math.random() * chromosomes.length);
+    const crossOverPoint = Math.floor(Math.random() * chromosomes[0].length);
     // Swap values among parents
     for (let i = 0; i < crossOverPoint; i += 1) {
         const temp = offspring1[i];
@@ -38,8 +38,8 @@ export default class GeneticModel extends Model {
 
   mutate(chromosomes) {
     chromosomes.forEach(chromosome => {
-      const mutationPoint = Math.floor(Math.random() * chromosomes.length);
-      chromosome[mutationPoint] = Math.random();
+      const mutationPoint = Math.floor(Math.random() * chromosome.length);
+      chromosome[mutationPoint] += chromosome[mutationPoint] * (Math.random() - 1) * .4;
     });
   }
 }
